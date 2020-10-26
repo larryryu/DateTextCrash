@@ -1,0 +1,70 @@
+* thread #1, queue = 'com.apple.main-thread', stop reason = EXC_BAD_INSTRUCTION (code=EXC_I386_INVOP, subcode=0x0)
+  * frame #0: 0x00007fff5670d866 SwiftUI`SwiftUI.DisplayList.ViewUpdater.ViewCache.setNextUpdate(_: SwiftUI.Time, item: SwiftUI.DisplayList.Item, state: Swift.UnsafePointer<SwiftUI.DisplayList.ViewUpdater.Model.State>, tag: SwiftUI.DisplayList.ViewUpdater.ViewCache.Tag) -> () + 326
+    frame #1: 0x00007fff5698d6d9 SwiftUI`SwiftUI.DisplayList.ViewUpdater.(updateItemView in _C85E9C9D8E8767197A33852BB19DA7BE)(container: inout SwiftUI.DisplayList.ViewUpdater.(Container in _C85E9C9D8E8767197A33852BB19DA7BE), from: SwiftUI.DisplayList.Item, localState: inout SwiftUI.DisplayList.ViewUpdater.Model.State) -> () + 1113
+    frame #2: 0x00007fff5698cdf3 SwiftUI`SwiftUI.DisplayList.ViewUpdater.(updateInheritedView in _C85E9C9D8E8767197A33852BB19DA7BE)(container: inout SwiftUI.DisplayList.ViewUpdater.(Container in _C85E9C9D8E8767197A33852BB19DA7BE), from: SwiftUI.DisplayList.Item, parentState: Swift.UnsafePointer<SwiftUI.DisplayList.ViewUpdater.Model.State>) -> () + 451
+    frame #3: 0x00007fff5698c89b SwiftUI`SwiftUI.DisplayList.ViewUpdater.(update in _C85E9C9D8E8767197A33852BB19DA7BE)(container: inout SwiftUI.DisplayList.ViewUpdater.(Container in _C85E9C9D8E8767197A33852BB19DA7BE), from: SwiftUI.DisplayList, parentState: Swift.UnsafePointer<SwiftUI.DisplayList.ViewUpdater.Model.State>) -> () + 523
+    frame #4: 0x00007fff5698c56a SwiftUI`closure #1 (Swift.UnsafePointer<SwiftUI.DisplayList.ViewUpdater.Model.State.Globals>) -> SwiftUI.Time in SwiftUI.DisplayList.ViewUpdater.render(rootView: __C.UIView, from: SwiftUI.DisplayList, time: SwiftUI.Time, version: SwiftUI.DisplayList.Version, maxVersion: SwiftUI.DisplayList.Version, contentsScale: CoreGraphics.CGFloat) -> SwiftUI.Time + 314
+    frame #5: 0x00007fff5698c3ed SwiftUI`SwiftUI.DisplayList.ViewUpdater.render(rootView: __C.UIView, from: SwiftUI.DisplayList, time: SwiftUI.Time, version: SwiftUI.DisplayList.Version, maxVersion: SwiftUI.DisplayList.Version, contentsScale: CoreGraphics.CGFloat) -> SwiftUI.Time + 717
+    frame #6: 0x00007fff56a4292e SwiftUI`SwiftUI.DisplayList.ViewRenderer.render(rootView: __C.UIView, from: SwiftUI.DisplayList, time: SwiftUI.Time, nextTime: SwiftUI.Time, version: SwiftUI.DisplayList.Version, maxVersion: SwiftUI.DisplayList.Version, contentsScale: CoreGraphics.CGFloat) -> SwiftUI.Time + 110
+    frame #7: 0x00007fff56634146 SwiftUI`SwiftUI._UIHostingView.renderDisplayList(_: SwiftUI.DisplayList, time: SwiftUI.Time, nextTime: SwiftUI.Time, version: SwiftUI.DisplayList.Version, maxVersion: SwiftUI.DisplayList.Version) -> SwiftUI.Time + 230
+    frame #8: 0x00007fff56bc9e58 SwiftUI`closure #1 () -> () in (extension in SwiftUI):SwiftUI.ViewRendererHost.render(interval: Swift.Double, updateDisplayList: Swift.Bool) -> () + 4360
+    frame #9: 0x00007fff56bbc244 SwiftUI`(extension in SwiftUI):SwiftUI.ViewRendererHost.render(interval: Swift.Double, updateDisplayList: Swift.Bool) -> () + 340
+    frame #10: 0x00007fff56d38901 SwiftUI`SwiftUI._UIHostingView.layoutSubviews() -> () + 241
+    frame #11: 0x00007fff56d38925 SwiftUI`@objc SwiftUI._UIHostingView.layoutSubviews() -> () + 21
+    frame #12: 0x00007fff24bd6760 UIKitCore`-[UIView(CALayerDelegate) layoutSublayersOfLayer:] + 2924
+    frame #13: 0x00007fff27ae01df QuartzCore`-[CALayer layoutSublayers] + 258
+    frame #14: 0x00007fff27ae6691 QuartzCore`CA::Layer::layout_if_needed(CA::Transaction*) + 575
+    frame #15: 0x00007fff27af23e9 QuartzCore`CA::Layer::layout_and_display_if_needed(CA::Transaction*) + 65
+    frame #16: 0x00007fff27a32164 QuartzCore`CA::Context::commit_transaction(CA::Transaction*, double, double*) + 496
+    frame #17: 0x00007fff27a68eff QuartzCore`CA::Transaction::commit() + 783
+    frame #18: 0x00007fff24691d7a UIKitCore`__34-[UIApplication _firstCommitBlock]_block_invoke_2 + 81
+    frame #19: 0x00007fff2038b16c CoreFoundation`__CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 12
+    frame #20: 0x00007fff2038a580 CoreFoundation`__CFRunLoopDoBlocks + 434
+    frame #21: 0x00007fff20384f90 CoreFoundation`__CFRunLoopRun + 899
+    frame #22: 0x00007fff20384722 CoreFoundation`CFRunLoopRunSpecific + 567
+    frame #23: 0x00007fff2baaedb3 GraphicsServices`GSEventRunModal + 139
+    frame #24: 0x00007fff24674707 UIKitCore`-[UIApplication _run] + 912
+    frame #25: 0x00007fff246795b8 UIKitCore`UIApplicationMain + 101
+    frame #26: 0x00007fff56bfe1a7 SwiftUI`closure #1 (Swift.UnsafeMutablePointer<Swift.Optional<Swift.UnsafeMutablePointer<Swift.Int8>>>) -> Swift.Never in SwiftUI.(KitRendererCommon in _ACC2C5639A7D76F611E170E831FCA491)(Swift.AnyObject.Type) -> Swift.Never + 119
+    frame #27: 0x00007fff56bfe11f SwiftUI`SwiftUI.runApp<A where A: SwiftUI.App>(A) -> Swift.Never + 143
+    frame #28: 0x00007fff56735cfd SwiftUI`static (extension in SwiftUI):SwiftUI.App.main() -> () + 61
+    frame #29: 0x000000010476a931 DateTextCrash`static DateTextCrashApp.$main(self=DateTextCrash.DateTextCrashApp) at <compiler-generated>:0
+    frame #30: 0x000000010476a9b4 DateTextCrash`main at DateTextCrashApp.swift:0
+    frame #31: 0x00007fff20256409 libdyld.dylib`start + 1
+    frame #32: 0x00007fff20256409 libdyld.dylib`start + 1
+  thread #2
+    frame #0: 0x00007fff5ea585ce libsystem_kernel.dylib`__workq_kernreturn + 10
+    frame #1: 0x00007fff5ea934fd libsystem_pthread.dylib`_pthread_wqthread + 414
+    frame #2: 0x00007fff5ea92467 libsystem_pthread.dylib`start_wqthread + 15
+  thread #3
+    frame #0: 0x00007fff5ea585ce libsystem_kernel.dylib`__workq_kernreturn + 10
+    frame #1: 0x00007fff5ea934fd libsystem_pthread.dylib`_pthread_wqthread + 414
+    frame #2: 0x00007fff5ea92467 libsystem_pthread.dylib`start_wqthread + 15
+  thread #4
+    frame #0: 0x00007fff5ea585ce libsystem_kernel.dylib`__workq_kernreturn + 10
+    frame #1: 0x00007fff5ea934fd libsystem_pthread.dylib`_pthread_wqthread + 414
+    frame #2: 0x00007fff5ea92467 libsystem_pthread.dylib`start_wqthread + 15
+  thread #5
+    frame #0: 0x00007fff5ea585ce libsystem_kernel.dylib`__workq_kernreturn + 10
+    frame #1: 0x00007fff5ea934fd libsystem_pthread.dylib`_pthread_wqthread + 414
+    frame #2: 0x00007fff5ea92467 libsystem_pthread.dylib`start_wqthread + 15
+  thread #6, name = 'com.apple.uikit.eventfetch-thread'
+    frame #0: 0x00007fff5ea56f0e libsystem_kernel.dylib`mach_msg_trap + 10
+    frame #1: 0x00007fff5ea57280 libsystem_kernel.dylib`mach_msg + 60
+    frame #2: 0x00007fff2038aa08 CoreFoundation`__CFRunLoopServiceMachPort + 316
+    frame #3: 0x00007fff20385111 CoreFoundation`__CFRunLoopRun + 1284
+    frame #4: 0x00007fff20384722 CoreFoundation`CFRunLoopRunSpecific + 567
+    frame #5: 0x00007fff208297b9 Foundation`-[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 209
+    frame #6: 0x00007fff20829a28 Foundation`-[NSRunLoop(NSRunLoop) runUntilDate:] + 72
+    frame #7: 0x00007fff2472ba8d UIKitCore`-[UIEventFetcher threadMain] + 464
+    frame #8: 0x00007fff20851e68 Foundation`__NSThread__start__ + 1042
+    frame #9: 0x00007fff5ea96950 libsystem_pthread.dylib`_pthread_start + 224
+    frame #10: 0x00007fff5ea9247b libsystem_pthread.dylib`thread_start + 15
+  thread #7
+    frame #0: 0x00007fff5ea585ce libsystem_kernel.dylib`__workq_kernreturn + 10
+    frame #1: 0x00007fff5ea934fd libsystem_pthread.dylib`_pthread_wqthread + 414
+    frame #2: 0x00007fff5ea92467 libsystem_pthread.dylib`start_wqthread + 15
+  thread #8
+    frame #0: 0x00007fff5ea585ce libsystem_kernel.dylib`__workq_kernreturn + 10
+    frame #1: 0x00007fff5ea934fd libsystem_pthread.dylib`_pthread_wqthread + 414
+    frame #2: 0x00007fff5ea92467 libsystem_pthread.dylib`start_wqthread + 15
