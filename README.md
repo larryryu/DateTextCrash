@@ -1,4 +1,7 @@
-# SwiftUI Crash: Text Within ScrollView
+# (Resolved) SwiftUI Crash: Text Within ScrollView
+
+
+# *This issue is now resolved in Xcode Version 12.2 (12B45b)*
 
 ### Description
 The crash occurs when Text (initialized with Date) is a child of a ScrollView. Note it doesn’t seem to matter how deeply nested Text is within the ScrollView. Got the same crash with 5 levels of HStack between the ScrollView and Text. See attached "bt_all_output.txt" for backtrace when the crash occured.
